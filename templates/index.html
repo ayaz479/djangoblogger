@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="jumbotron text-center">
+        <h3>أهلا بكم في مدونة الاخبار الرياضية </h3>
+        <p>سوف نقوم في هذه المدونة بكتابة اخر الاخبار الرياضية على الصعيد العربي والعالمي </p>
+</div>
+
+
+<p>
+        {% if request.user.is_authenticated %}
+                Giriş Yapılmış, {{request.user.username}}
+        {% else %}
+                Giriş Yapılmamış
+        {% endif %}
+
+</p>
+{% endblock body %}
+
